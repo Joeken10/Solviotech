@@ -113,8 +113,8 @@ function Contact() {
             <div className="icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <p>+1 (555) 123-4567</p>
-              <p>+1 (555) 987-6543</p>
+              <p>+1 +254 720955034</p>
+              <p>+1 +254 720955034</p>
             </div>
           </div>
 
