@@ -122,8 +122,9 @@ function Contact() {
             <div className="icon">✉️</div>
             <div>
               <h4>Email</h4>
-              <p>hello@solviotech.com</p>
-              <p>projects@solviotech.com</p>
+              <p>info@solviotech.com</p>
+              <p>joek@solviotech.com</p>
+              <p>posir@solviotech.com<p/>
             </div>
           </div>
         </div>
