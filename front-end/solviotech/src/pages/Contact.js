@@ -124,7 +124,7 @@ function Contact() {
               <h4>Email</h4>
               <p>info@solviotech.com</p>
               <p>joek@solviotech.com</p>
-              <p>posir@solviotech.com<p/>
+              <p>posir@solviotech.com</p>,
             </div>
           </div>
         </div>
