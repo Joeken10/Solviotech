@@ -4,13 +4,9 @@
   align-items: center;
   padding: 15px 40px;
 
- 
-  background: rgba(255, 255, 255, 0.15); 
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
+  background: #ffffff; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -38,16 +34,15 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #fff; 
+  color: #222; 
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #00a2ff;
+  color: #0077ff;
 }
-
 
 .contact-btn {
   background: linear-gradient(135deg, #0077ff, #00a2ff);
@@ -65,7 +60,6 @@
   background: linear-gradient(135deg, #005fd4, #0088ff);
   transform: translateY(-2px);
 }
-
 
 @media (max-width: 900px) {
   .navbar {

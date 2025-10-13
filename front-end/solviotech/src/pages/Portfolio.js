@@ -17,7 +17,7 @@ const allProjects = [
     title: "Task Management App",
     description:
       "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+    technologies: ["React", "Node.js", "PostgreSQL", "Python"],
     image: "https://source.unsplash.com/random/800x600?task",
     github: "#",
     demo: "#",
@@ -27,7 +27,7 @@ const allProjects = [
     title: "Analytics Dashboard",
     description:
       "Interactive business intelligence dashboard with charts, KPIs, and live data updates.",
-    technologies: ["React", "D3.js", "Python", "FastAPI", "Chart.js"],
+    technologies: ["React", "Node.js", "Python", "FastAPI", "Chart.js"],
     image: "https://source.unsplash.com/random/800x600?dashboard",
     github: "#",
     demo: "#",
@@ -47,7 +47,7 @@ const allProjects = [
     title: "Portfolio Website",
     description:
       "Responsive and elegant portfolio website to showcase projects and skills.",
-    technologies: ["React", "CSS", "Vite", "EmailJS"],
+    technologies: ["React", "CSS", "Flask", "EmailJS"],
     image: "https://source.unsplash.com/random/800x600?portfolio,website",
     github: "#",
     demo: "#",

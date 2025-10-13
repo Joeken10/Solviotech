@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact</h3>
           <p>Email: <a href="mailto:info@solviotech.com">info@solviotech.com</a></p>
-          <p>Phone: +254 700 123 456</p>
+          <p>Phone: +254 720 955 034</p>
           <div className="social-icons">
             <a href="fb"><i className="fab fa-facebook-f"></i></a>
             <a href="x"><i className="fab fa-twitter"></i></a>
@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Solviotech. All rights reserved.</p>
         <p className="credit">
-          Built with ❤️ by <span>Joseph Kennedy Elias (JK)</span> & <span>Philip Osir</span>
+          Built with ❤️ by <span>Joseph Kennedy (JK)</span> & <span>Philip Osir</span>
         </p>
       </div>
     </footer>

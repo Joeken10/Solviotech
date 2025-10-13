@@ -102,9 +102,9 @@ function Contact() {
             <div>
               <h4>Address</h4>
               <p>
-                123 Tech Street <br />
-                Innovation District <br />
-                Digital City, DC 12345
+                1st Kaunda Street <br />
+                Nairobi <br />
+                Nairobi, Kenya
               </p>
             </div>
           </div>
@@ -113,8 +113,8 @@ function Contact() {
             <div className="icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <p>+1 +254 720955034</p>
-              <p>+1 +254 720955034</p>
+              <p>+254 720955034</p>
+              <p>+254 720955034</p>
             </div>
           </div>
 
@@ -124,7 +124,7 @@ function Contact() {
               <h4>Email</h4>
               <p>info@solviotech.com</p>
               <p>joek@solviotech.com</p>
-              <p>posir@solviotech.com</p>,
+              <p>posir@solviotech.com</p>
             </div>
           </div>
         </div>

@@ -49,21 +49,33 @@ const HeroSection = () => {
               Get In Touch
             </Link>
           </div>
+        </div>
+      </section>
 
-          <div className="hero-stats">
-            <div className="stat">
-              <h3>12+</h3>
-              <p>Happy Clients</p>
-            </div>
-            <div className="stat">
-              <h3>20+</h3>
-              <p>Projects Completed</p>
-            </div>
-            <div className="stat">
-              <h3>2+</h3>
-              <p>Years Experience</p>
-            </div>
-          </div>
+      
+      <section className="hero-stats">
+        <div className="stat">
+          <i className="fas fa-briefcase"></i>
+          <h3>150+</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div className="stat">
+          <i className="fas fa-users"></i>
+          <h3>85+</h3>
+          <p>Happy Clients</p>
+        </div>
+
+        <div className="stat">
+          <i className="fas fa-code"></i>
+          <h3>20+</h3>
+          <p>Technologies</p>
+        </div>
+
+        <div className="stat">
+          <i className="fas fa-smile"></i>
+          <h3>99%</h3>
+          <p>Satisfaction Rate</p>
         </div>
       </section>
 
@@ -144,7 +156,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-     
+      
       <section className="home-cta">
         <div className="container cta-inner">
           <div>
