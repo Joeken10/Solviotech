@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
+      "title": "The Sizzled Munch",
       "description": "A comprehensive e-commerce solution with payment integration, inventory management, and an admin dashboard.",
       "technologies": ["React", "Flask", "PostgreSQL", "Stripe", "CSS"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "title": "Task Management App",
+      "title": "But Tap",
       "description": "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Python"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "title": "Analytics Dashboard",
+      "title": "Menu Metrics Africa",
       "description": "Interactive business intelligence dashboard with charts, KPIs, and live data updates.",
       "technologies": ["React", "Node.js", "Python", "FastAPI", "Chart.js"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "title": "AI Chat Assistant",
+      "title": "Electrohub",
       "description": "A conversational AI chatbot built using OpenAI’s GPT API for customer support automation.",
       "technologies": ["React", "Flask", "OpenAI API", "Tailwind"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "title": "Portfolio Website",
+      "title": "Shopsphere",
       "description": "Responsive and elegant portfolio website to showcase projects and skills.",
       "technologies": ["React", "CSS", "Flask", "EmailJS"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
