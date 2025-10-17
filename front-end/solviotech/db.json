@@ -5,7 +5,7 @@
       "title": "E-Commerce Platform",
       "description": "A comprehensive e-commerce solution with payment integration, inventory management, and an admin dashboard.",
       "technologies": ["React", "Flask", "PostgreSQL", "Stripe", "CSS"],
-      "image": "https://source.unsplash.com/random/800x600?ecommerce",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "Web Development"
@@ -15,7 +15,7 @@
       "title": "Task Management App",
       "description": "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Python"],
-      "image": "https://source.unsplash.com/random/800x600?task",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "Mobile Development"
@@ -25,7 +25,7 @@
       "title": "Analytics Dashboard",
       "description": "Interactive business intelligence dashboard with charts, KPIs, and live data updates.",
       "technologies": ["React", "Node.js", "Python", "FastAPI", "Chart.js"],
-      "image": "https://source.unsplash.com/random/800x600?dashboard",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "Data Visualization"
@@ -35,7 +35,7 @@
       "title": "AI Chat Assistant",
       "description": "A conversational AI chatbot built using OpenAI’s GPT API for customer support automation.",
       "technologies": ["React", "Flask", "OpenAI API", "Tailwind"],
-      "image": "https://source.unsplash.com/random/800x600?ai,chatbot",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "AI Solutions"
@@ -45,7 +45,7 @@
       "title": "Portfolio Website",
       "description": "Responsive and elegant portfolio website to showcase projects and skills.",
       "technologies": ["React", "CSS", "Flask", "EmailJS"],
-      "image": "https://source.unsplash.com/random/800x600?portfolio,website",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "Web Development"
@@ -55,7 +55,7 @@
       "title": "IoT Device Monitor",
       "description": "Web app for real-time monitoring of IoT devices with MQTT and Flask backend.",
       "technologies": ["Flask", "MQTT", "React", "WebSockets"],
-      "image": "https://source.unsplash.com/random/800x600?iot,devices",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#",
       "category": "IoT"
@@ -86,7 +86,7 @@
   ],
 
   "hero": {
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80&auto=format&fit=crop",
+    "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
     "subtitle": "Crafting Digital Solutions That",
     "title": "Transform Your Business",
     "description": "We are Solviotech — a passionate team of developers creating innovative web and mobile applications that drive results and exceed expectations.",
@@ -125,7 +125,7 @@
       "title": "E-Commerce Platform",
       "description": "A full-stack e-commerce solution built with React and Flask.",
       "technologies": ["React", "Flask", "PostgreSQL", "Tailwind CSS"],
-      "image": "https://source.unsplash.com/random/800x600?ecommerce",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#"
     },
@@ -133,9 +133,55 @@
       "title": "Task Management App",
       "description": "Modern task management application with real-time collaboration.",
       "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
-      "image": "https://source.unsplash.com/random/800x600?taskmanagement",
+      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
       "github": "#",
       "demo": "#"
     }
-  ]
+  ],
+
+  "about": {
+    "hero": {
+      "title": "About Solviotech",
+      "subtitle": "Empowering businesses and innovators through modern software solutions crafted with excellence.",
+      "backgroundImage": "/images/Screenshot from 2025-08-12 15-36-13.png"
+    },
+    "mission": {
+      "title": "Our Story & Mission",
+      "content": [
+        "Solviotech was founded by Joseph Kennedy (JK) and Philip Osir — two passionate full-stack software engineers driven by the vision of providing elegant, scalable, and intelligent technology solutions for businesses around the world.",
+        "We specialize in full-stack web and mobile development, cloud integration, and UI/UX design. Our mission is to create meaningful digital experiences that simplify complex problems and accelerate business growth."
+      ]
+    },
+    "team": {
+      "sectionSubtitle": "Meet Our Team",
+      "sectionTitle": "The passionate individuals behind Solviotech's success",
+      "members": [
+        {
+          "name": "Joseph Kennedy (JK)",
+          "role": "Full-Stack Developer & Co-Founder",
+          "image": "/images/joeken.png",
+          "bio": "Passionate full-stack developer with expertise in React, Python, and cloud technologies. JK specializes in creating scalable web applications and has a keen eye for both frontend aesthetics and backend architecture.",
+          "skillsTitle": "Skills & Technologies",
+          "skills": ["React", "Python", "Flask", "AWS", "PostgreSQL", "Docker"]
+        },
+        {
+          "name": "Philip Osir",
+          "role": "Full-Stack Engineer & Co-Founder",
+          "image": "/images/20240223_235334.jpg",
+          "bio": "Skilled full-stack engineer and UI/UX designer who bridges design and functionality. Osir crafts seamless, high-performance web experiences with strong attention to user interaction, scalability, and modern architecture.",
+          "skillsTitle": "Skills & Technologies",
+          "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "MongoDB",
+            "Tailwind CSS",
+            "Figma"
+          ]
+        }
+      ]
+    }
+  }
 }

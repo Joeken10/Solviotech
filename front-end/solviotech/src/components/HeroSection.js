@@ -37,7 +37,7 @@ const HeroSection = () => {
 
   return (
     <div className="hero-wrapper">
-      {/* ================= HERO SECTION ================= */}
+      
       <section
         className="hero"
         style={{
@@ -68,7 +68,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ================= STATS ================= */}
+      
       <section className="hero-stats">
         {stats.map((item, index) => (
           <div className="stat" key={index}>
@@ -79,7 +79,7 @@ const HeroSection = () => {
         ))}
       </section>
 
-      {/* ================= SERVICES ================= */}
+      
       <section className="services-section">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
@@ -98,7 +98,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ================= FEATURED PROJECTS ================= */}
+     
       <section className="featured-section">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
@@ -143,7 +143,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ================= CTA SECTION ================= */}
+      
       <section className="home-cta">
         <div className="container cta-inner">
           <div>

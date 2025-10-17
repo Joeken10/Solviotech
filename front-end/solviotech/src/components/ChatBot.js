@@ -11,12 +11,12 @@ const ChatBot = () => {
   const [chatReplies, setChatReplies] = useState([]);
   const messagesEndRef = useRef(null);
 
-  // Auto-scroll to the latest message
+  
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Fetch chatbot replies from db.json
+  
   useEffect(() => {
     const fetchReplies = async () => {
       try {
@@ -38,7 +38,7 @@ const ChatBot = () => {
     setMessages(updatedMessages);
     setInput("");
 
-    // Find the best matching response
+    
     const match =
       chatReplies.find((item) =>
         input.toLowerCase().includes(item.question.toLowerCase())
