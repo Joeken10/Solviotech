@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ChatBot.css";
 import { MessageCircle, Send, X } from "lucide-react";
 
@@ -8,37 +8,50 @@ const ChatBot = () => {
     { sender: "bot", text: "👋 Hi, I’m Solvio! How can I help you today?" },
   ]);
   const [input, setInput] = useState("");
+  const [chatReplies, setChatReplies] = useState([]);
+  const messagesEndRef = useRef(null);
 
+  // Auto-scroll to the latest message
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  // Fetch chatbot replies from db.json
+  useEffect(() => {
+    const fetchReplies = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/chatReplies");
+        const data = await res.json();
+        setChatReplies(data);
+      } catch (err) {
+        console.error("Failed to load chat replies:", err);
+      }
+    };
+    fetchReplies();
+  }, []);
 
   const handleSend = async () => {
     if (!input.trim()) return;
 
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
+    const userMessage = { sender: "user", text: input };
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
 
-    
-    try {
-      const res = await fetch("http://localhost:5000/api/chat", {
-        // 👈 Adjust endpoint if using Flask
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
+    // Find the best matching response
+    const match =
+      chatReplies.find((item) =>
+        input.toLowerCase().includes(item.question.toLowerCase())
+      ) || null;
 
-      const data = await res.json();
+    const botResponse = match
+      ? match.reply
+      : "🤖 Sorry, I’m not sure how to answer that yet.";
 
-      setMessages([
-        ...newMessages,
-        { sender: "bot", text: data.reply || "Sorry, I didn’t quite get that." },
-      ]);
-    } catch (error) {
-      console.error("Chat error:", error);
-      setMessages([
-        ...newMessages,
-        { sender: "bot", text: "⚠️ Oops! Solvio is having connection issues." },
-      ]);
-    }
+    setMessages([
+      ...updatedMessages,
+      { sender: "bot", text: botResponse },
+    ]);
   };
 
   return (
@@ -58,6 +71,7 @@ const ChatBot = () => {
                 <p>{msg.text}</p>
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </div>
 
           <div className="chatbot-input">

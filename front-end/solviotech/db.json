@@ -1,0 +1,141 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A comprehensive e-commerce solution with payment integration, inventory management, and an admin dashboard.",
+      "technologies": ["React", "Flask", "PostgreSQL", "Stripe", "CSS"],
+      "image": "https://source.unsplash.com/random/800x600?ecommerce",
+      "github": "#",
+      "demo": "#",
+      "category": "Web Development"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Python"],
+      "image": "https://source.unsplash.com/random/800x600?task",
+      "github": "#",
+      "demo": "#",
+      "category": "Mobile Development"
+    },
+    {
+      "id": 3,
+      "title": "Analytics Dashboard",
+      "description": "Interactive business intelligence dashboard with charts, KPIs, and live data updates.",
+      "technologies": ["React", "Node.js", "Python", "FastAPI", "Chart.js"],
+      "image": "https://source.unsplash.com/random/800x600?dashboard",
+      "github": "#",
+      "demo": "#",
+      "category": "Data Visualization"
+    },
+    {
+      "id": 4,
+      "title": "AI Chat Assistant",
+      "description": "A conversational AI chatbot built using OpenAI’s GPT API for customer support automation.",
+      "technologies": ["React", "Flask", "OpenAI API", "Tailwind"],
+      "image": "https://source.unsplash.com/random/800x600?ai,chatbot",
+      "github": "#",
+      "demo": "#",
+      "category": "AI Solutions"
+    },
+    {
+      "id": 5,
+      "title": "Portfolio Website",
+      "description": "Responsive and elegant portfolio website to showcase projects and skills.",
+      "technologies": ["React", "CSS", "Flask", "EmailJS"],
+      "image": "https://source.unsplash.com/random/800x600?portfolio,website",
+      "github": "#",
+      "demo": "#",
+      "category": "Web Development"
+    },
+    {
+      "id": 6,
+      "title": "IoT Device Monitor",
+      "description": "Web app for real-time monitoring of IoT devices with MQTT and Flask backend.",
+      "technologies": ["Flask", "MQTT", "React", "WebSockets"],
+      "image": "https://source.unsplash.com/random/800x600?iot,devices",
+      "github": "#",
+      "demo": "#",
+      "category": "IoT"
+    }
+  ],
+
+  "chatReplies": [
+    {
+      "id": 1,
+      "question": "hello",
+      "reply": "👋 Hi there! I'm Solvio, your virtual assistant. How can I help you today?"
+    },
+    {
+      "id": 2,
+      "question": "services",
+      "reply": "We offer web development, AI solutions, data visualization, and IoT system integration."
+    },
+    {
+      "id": 3,
+      "question": "contact",
+      "reply": "📞 You can reach us via the contact form or email us at info@solviotech.com."
+    },
+    {
+      "id": 4,
+      "question": "portfolio",
+      "reply": "🧩 Check out our latest work on the Projects page — we’ve built AI tools, dashboards, and more!"
+    }
+  ],
+
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80&auto=format&fit=crop",
+    "subtitle": "Crafting Digital Solutions That",
+    "title": "Transform Your Business",
+    "description": "We are Solviotech — a passionate team of developers creating innovative web and mobile applications that drive results and exceed expectations.",
+    "primaryBtn": "View Our Work →",
+    "secondaryBtn": "Get In Touch"
+  },
+
+  "stats": [
+    { "icon": "fas fa-briefcase", "value": "150+", "label": "Projects Completed" },
+    { "icon": "fas fa-users", "value": "85+", "label": "Happy Clients" },
+    { "icon": "fas fa-code", "value": "20+", "label": "Technologies" },
+    { "icon": "fas fa-smile", "value": "99%", "label": "Satisfaction Rate" }
+  ],
+
+  "services": [
+    {
+      "name": "Web Development",
+      "description": "Custom web applications built with modern frameworks and best practices."
+    },
+    {
+      "name": "Mobile Development",
+      "description": "Native and cross-platform mobile apps that deliver exceptional user experiences."
+    },
+    {
+      "name": "UI/UX Design",
+      "description": "Beautiful, intuitive designs that enhance user engagement and satisfaction."
+    },
+    {
+      "name": "Backend Solutions",
+      "description": "Robust, scalable backend systems to power your applications."
+    }
+  ],
+
+  "featuredProjects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution built with React and Flask.",
+      "technologies": ["React", "Flask", "PostgreSQL", "Tailwind CSS"],
+      "image": "https://source.unsplash.com/random/800x600?ecommerce",
+      "github": "#",
+      "demo": "#"
+    },
+    {
+      "title": "Task Management App",
+      "description": "Modern task management application with real-time collaboration.",
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
+      "image": "https://source.unsplash.com/random/800x600?taskmanagement",
+      "github": "#",
+      "demo": "#"
+    }
+  ]
+}
