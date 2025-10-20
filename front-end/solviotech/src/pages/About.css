@@ -1,6 +1,7 @@
 .about-page {
   font-family: "Poppins", sans-serif;
-  color: #222;
+  color: #074a3f;
+  background: #c3b996;
 }
 
 
@@ -15,17 +16,18 @@
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(7, 74, 63, 0.65);
   padding: 40px;
   border-radius: 12px;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 .overlay h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #c3b996;
 }
 
 .overlay p {
@@ -33,47 +35,48 @@
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
+  color: #f4f4f4;
 }
 
 
 .about-mission {
   padding: 80px 20px;
   text-align: center;
-  background: #f8faff;
+  background: #c3b996;
 }
 
 .about-mission h2 {
   font-size: 28px;
-  color: #004aad;
+  color: #074a3f;
   margin-bottom: 25px;
+  font-weight: 700;
 }
 
 .about-mission p {
   font-size: 16px;
   max-width: 800px;
   margin: 10px auto;
-  color: #444;
-  line-height: 1.7;
+  color: #2a2a2a;
+  line-height: 1.8;
 }
-
 
 .team-section {
   text-align: center;
   padding: 100px 20px;
-  background: #fff;
+  background: #f9f9f7;
 }
 
 .section-subtitle {
-  color: #666;
+  color: #5a5a5a;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 .section-title {
-  color: #222;
-  font-size: 24px;
-  font-weight: 600;
+  color: #074a3f;
+  font-size: 26px;
+  font-weight: 700;
   margin-bottom: 60px;
 }
 
@@ -85,17 +88,18 @@
 }
 
 .team-card {
-  background: white;
+  background: #ffffff;
   width: 340px;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(7, 74, 63, 0.2);
+  box-shadow: 0 4px 12px rgba(7, 74, 63, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(7, 74, 63, 0.3);
 }
 
 .team-img {
@@ -113,11 +117,11 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 4px;
-  color: #222;
+  color: #074a3f;
 }
 
 .team-info h4 {
-  color: #0077ff;
+  color: #c3b996;
   font-weight: 500;
   font-size: 15px;
   margin-bottom: 15px;
@@ -125,7 +129,7 @@
 
 .team-info p {
   font-size: 14.5px;
-  color: #444;
+  color: #3a1012;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -133,9 +137,10 @@
 .team-info h5 {
   font-size: 15px;
   font-weight: 600;
-  color: #004aad;
+  color: #074a3f;
   margin-bottom: 10px;
 }
+
 
 .skills {
   display: flex;
@@ -144,23 +149,24 @@
 }
 
 .skills span {
-  background: #eaf2ff;
-  color: #0077ff;
+  background: #c3b996;
+  color: #074a3f;
   padding: 6px 10px;
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid rgba(7, 74, 63, 0.2);
 }
 
 
 .about-footer {
-  background: #004aad;
-  color: white;
+  background: #074a3f;
+  color: #ffffff;
   text-align: center;
   padding: 25px 0;
   font-size: 14px;
+  border-top: 2px solid #c3b996;
 }
-
 
 @media (max-width: 900px) {
   .team-grid {

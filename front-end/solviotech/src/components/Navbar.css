@@ -1,81 +1,160 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-
-  background: #ffffff; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-
+  padding: 20px 100px; 
+  background: linear-gradient(
+    to right,
+    #ffffff 8%,    
+    #074a3f 18%,  
+    #032d27 70%    
+  );
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
+  transition: background 0.3s ease, padding 0.3s ease;
 }
 
+
 .logo {
-  font-size: 22px;
-  font-weight: 600;
-  color: #0077ff;
+  font-size: 44px;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
+  letter-spacing: 1px;
 }
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+
+.logo-text {
+  white-space: nowrap;
+}
+
+
+.logo-solvio {
+  color: #032d27; 
+}
+
+
+.logo-tech {
+  color: #c3b996; 
+  font-weight: 800;
+}
+
+
+.logo-text:hover .logo-tech {
+  text-shadow: 0 0 10px rgba(195, 185, 150, 0.7);
+  transition: all 0.3s ease;
+}
+
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 50px; 
+  margin-right: 130px; 
+}
+
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 60px; 
   margin: 0;
-  flex: 1;
-  justify-content: flex-end;
-  margin-right: 50px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #222; 
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px; 
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease, transform 0.2s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #0077ff;
+  color: #c3b996;
+  border-bottom: 2px solid #c3b996;
+  transform: scale(1.08);
 }
 
+
 .contact-btn {
-  background: linear-gradient(135deg, #0077ff, #00a2ff);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 500;
+  background: linear-gradient(135deg, #c3b996, #f2e7c9);
+  color: #074a3f;
+  border: 2px solid #074a3f;
+  padding: 16px 42px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 20px; 
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-right: 200px;
+  box-shadow: 0 0 18px rgba(195, 185, 150, 0.45);
+  transition: all 0.3s ease;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(195, 185, 150, 0.45); }
+  50% { box-shadow: 0 0 30px rgba(195, 185, 150, 0.8); }
 }
 
 .contact-btn:hover {
-  background: linear-gradient(135deg, #005fd4, #0088ff);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #074a3f, #3a1012);
+  color: #ffffff;
+  border: 2px solid #c3b996;
+  transform: translateY(-3px) scale(1.07);
+  animation: pulseGlow 1.2s ease-in-out infinite;
 }
+
 
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    padding: 15px 25px;
+    gap: 12px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-right: 0;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-right: 0;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
   }
 
   .contact-btn {
-    width: auto;
-    margin-right: 0;
+    padding: 13px 32px;
+    font-size: 18px;
   }
 }

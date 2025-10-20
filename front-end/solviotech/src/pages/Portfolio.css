@@ -1,19 +1,24 @@
 .portfolio-page {
   padding: 60px 10%;
-  background: #f9f9f9;
+  background: #f8f8f5; 
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  color: #074a3f;
 }
+
 
 .portfolio-page h1 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
+  font-weight: 700;
+  color: #074a3f;
 }
 
 .portfolio-page h1 span {
-  color: #007bff;
+  color: #c3b996;
 }
+
 
 .portfolio-controls {
   display: flex;
@@ -27,16 +32,19 @@
   width: 100%;
   max-width: 400px;
   padding: 10px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(7, 74, 63, 0.3);
   border-radius: 25px;
   outline: none;
   transition: all 0.3s ease;
+  background: #ffffff;
+  color: #074a3f;
 }
 
 .portfolio-controls input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  border-color: #c3b996;
+  box-shadow: 0 0 6px rgba(195, 185, 150, 0.4);
 }
+
 
 .filters {
   display: flex;
@@ -46,19 +54,21 @@
 }
 
 .filters button {
-  border: 1px solid #007bff;
+  border: 1px solid #074a3f;
   background: none;
-  color: #007bff;
+  color: #074a3f;
   padding: 8px 15px;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .filters button.active,
 .filters button:hover {
-  background: #007bff;
-  color: white;
+  background: #074a3f;
+  color: #c3b996;
+  border-color: #074a3f;
 }
 
 
@@ -67,7 +77,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
-
 
 @media (max-width: 1024px) {
   .projects-grid {
@@ -83,23 +92,26 @@
 
 
 .project-card {
-  background: white;
+  background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(7, 74, 63, 0.15);
+  box-shadow: 0 4px 10px rgba(7, 74, 63, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(195, 185, 150, 0.35);
 }
+
 
 .project-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
+
 
 .project-content {
   padding: 20px;
@@ -108,13 +120,17 @@
 .project-content h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
+  color: #074a3f;
+  font-weight: 600;
 }
 
 .project-content p {
-  color: #555;
+  color: #3a1012;
   font-size: 0.9rem;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
+
 
 .tech-tags {
   display: flex;
@@ -124,12 +140,14 @@
 }
 
 .tech-tags span {
-  background: #e9f3ff;
-  color: #007bff;
+  background: #c3b996;
+  color: #074a3f;
   font-size: 0.8rem;
   padding: 4px 10px;
   border-radius: 10px;
+  font-weight: 500;
 }
+
 
 .project-buttons {
   display: flex;
@@ -143,24 +161,30 @@
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 0.85rem;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
+
 .btn-primary {
-  background: #007bff;
-  color: white;
+  background: #074a3f;
+  color: #ffffff;
+  border: 1px solid #c3b996;
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: #c3b996;
+  color: #074a3f;
 }
 
+
 .btn-outline {
-  border: 1px solid #007bff;
-  color: #007bff;
+  border: 1px solid #074a3f;
+  color: #074a3f;
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: #007bff;
-  color: white;
+  background: #074a3f;
+  color: #c3b996;
 }

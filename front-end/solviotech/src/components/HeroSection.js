@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  Search,
+  PenTool,
+  Code2,
+  CheckCircle2,
+  Rocket,
+} from "lucide-react";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -41,7 +48,8 @@ const HeroSection = () => {
       <section
         className="hero"
         style={{
-          backgroundImage: `url(${heroData.image ||
+          backgroundImage: `url(${
+            heroData.image ||
             "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80&auto=format&fit=crop"
           })`,
         }}
@@ -68,7 +76,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      
+     
       <section className="hero-stats">
         {stats.map((item, index) => (
           <div className="stat" key={index}>
@@ -79,7 +87,7 @@ const HeroSection = () => {
         ))}
       </section>
 
-      
+     
       <section className="services-section">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
@@ -94,6 +102,46 @@ const HeroSection = () => {
                 <p>{service.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+     
+      <section className="process-timeline container">
+        <h2 className="section-title">Our Process</h2>
+        <p className="section-sub">
+          From concept to completion, we follow a transparent and efficient workflow.
+        </p>
+
+        <div className="timeline-grid">
+          <div className="timeline-card">
+            <div className="timeline-icon"><Search size={28} /></div>
+            <h3>Discovery</h3>
+            <p>We understand your vision, goals, and requirements through in-depth consultation.</p>
+          </div>
+
+          <div className="timeline-card">
+            <div className="timeline-icon"><PenTool size={28} /></div>
+            <h3>Design</h3>
+            <p>Creating intuitive wireframes and stunning UI/UX designs that bring your ideas to life.</p>
+          </div>
+
+          <div className="timeline-card">
+            <div className="timeline-icon"><Code2 size={28} /></div>
+            <h3>Development</h3>
+            <p>Building robust, scalable solutions using cutting-edge technologies and best practices.</p>
+          </div>
+
+          <div className="timeline-card">
+            <div className="timeline-icon"><CheckCircle2 size={28} /></div>
+            <h3>Testing</h3>
+            <p>Rigorous quality assurance and testing to ensure flawless performance across all platforms.</p>
+          </div>
+
+          <div className="timeline-card">
+            <div className="timeline-icon"><Rocket size={28} /></div>
+            <h3>Launch</h3>
+            <p>Seamless deployment and ongoing support to ensure your success in the digital world.</p>
           </div>
         </div>
       </section>
