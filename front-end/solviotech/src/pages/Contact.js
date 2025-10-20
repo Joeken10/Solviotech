@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import ChatBot from "../components/ChatBot"; 
+import ChatBot from "../components/ChatBot";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,12 @@ function Contact() {
     subject: "",
     message: "",
   });
+
+  const [activeFAQ, setActiveFAQ] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveFAQ(activeFAQ === index ? null : index);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,10 +26,32 @@ function Contact() {
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
+  const faqs = [
+    {
+      question: "What is your typical project timeline?",
+      answer:
+        "Project timelines vary based on complexity, but most web applications take 4–12 weeks from start to finish. We provide detailed timelines during our initial consultation.",
+    },
+    {
+      question: "Do you provide ongoing support and maintenance?",
+      answer:
+        "Yes! We offer comprehensive maintenance packages including updates, security monitoring, performance optimization, and feature enhancements.",
+    },
+    {
+      question: "What technologies do you specialize in?",
+      answer:
+        "We specialize in React, Next.js, Flask, Node.js, Python, and modern cloud technologies. We choose the best tech stack for each project's specific needs.",
+    },
+    {
+      question: "How do you handle project communication?",
+      answer:
+        "We maintain regular communication through scheduled calls, progress updates, and collaborative tools. You'll always know exactly where your project stands.",
+    },
+  ];
+
   return (
     <div className="contact-page">
       <div className="contact-container">
-        
         <div className="contact-form">
           <h2>Send us a message</h2>
           <p>
@@ -88,7 +116,6 @@ function Contact() {
           </form>
         </div>
 
-        
         <div className="contact-info">
           <h2>Let's Connect</h2>
           <p>
@@ -130,7 +157,32 @@ function Contact() {
         </div>
       </div>
 
-      
+      {/* FAQ SECTION */}
+      <section className="faq-section">
+        <h2>Quick answers to common questions</h2>
+        <p className="faq-intro">
+          Learn more about our services and how we work.
+        </p>
+
+        <div className="faq-list">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item ${activeFAQ === index ? "active" : ""}`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="faq-question">
+                <h4>{faq.question}</h4>
+                <span>{activeFAQ === index ? "−" : "+"}</span>
+              </div>
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <ChatBot />
     </div>
   );

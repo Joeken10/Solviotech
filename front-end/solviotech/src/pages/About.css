@@ -38,27 +38,41 @@
   color: #f4f4f4;
 }
 
-
 .about-mission {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
-  background: #c3b996;
+  background: linear-gradient(180deg, #c3b996 0%, #f5f3ec 100%);
+  border-top: 3px solid #074a3f;
+  border-bottom: 3px solid #074a3f;
 }
 
 .about-mission h2 {
-  font-size: 28px;
+  font-size: 34px;
   color: #074a3f;
-  margin-bottom: 25px;
-  font-weight: 700;
+  margin-bottom: 35px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(7, 74, 63, 0.3);
 }
 
 .about-mission p {
-  font-size: 16px;
-  max-width: 800px;
-  margin: 10px auto;
+  font-size: 18px;
+  max-width: 850px;
+  margin: 15px auto;
   color: #2a2a2a;
-  line-height: 1.8;
+  line-height: 1.9;
+  font-weight: 500;
 }
+
+.about-mission p strong {
+  color: #3a1012;
+  font-weight: 700;
+  background: rgba(195, 185, 150, 0.3);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
 
 .team-section {
   text-align: center;
@@ -80,58 +94,95 @@
   margin-bottom: 60px;
 }
 
+.team-section {
+  background: #f9f9f7;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  color: #074a3f;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
 .team-grid {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .team-card {
   background: #ffffff;
-  width: 340px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(7, 74, 63, 0.2);
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(7, 74, 63, 0.15);
+  overflow: hidden;
+  width: 48%;
+  min-width: 340px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(7, 74, 63, 0.3);
+  box-shadow: 0 10px 24px rgba(7, 74, 63, 0.25);
+}
+
+.team-card-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.team-image-wrapper {
+  flex: 1 1 40%;
+  background-color: #eee;
+  overflow: hidden;
 }
 
 .team-img {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
 }
 
 .team-info {
-  padding: 25px;
+  flex: 1 1 60%;
+  padding: 30px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .team-info h3 {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-weight: 700;
   color: #074a3f;
+  margin-bottom: 6px;
 }
 
 .team-info h4 {
-  color: #c3b996;
+  color: #217c6c;
   font-weight: 500;
   font-size: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .team-info p {
   font-size: 14.5px;
-  color: #3a1012;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: #2f2f2f;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
 .team-info h5 {
@@ -140,6 +191,43 @@
   color: #074a3f;
   margin-bottom: 10px;
 }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  background: #c3b996;
+  color: #074a3f;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(7, 74, 63, 0.2);
+}
+
+
+@media (max-width: 900px) {
+  .team-card {
+    width: 100%;
+  }
+
+  .team-card-inner {
+    flex-direction: column;
+  }
+
+  .team-image-wrapper {
+    height: 260px;
+  }
+
+  .team-info {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
 
 
 .skills {
@@ -159,31 +247,110 @@
 }
 
 
-.about-footer {
-  background: #074a3f;
-  color: #ffffff;
+
+.values-section {
+  background: linear-gradient(180deg, #f9f9f7 0%, #c3b996 100%);
   text-align: center;
-  padding: 25px 0;
+  padding: 100px 20px;
+}
+
+.values-subtitle {
+  color: #5a5a5a;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.values-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #074a3f;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(7, 74, 63, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 260px;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(7, 74, 63, 0.15);
+}
+
+
+@keyframes hardRattle {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  10% { transform: translate(-4px, -2px) rotate(-1deg); }
+  20% { transform: translate(4px, 2px) rotate(1deg); }
+  30% { transform: translate(-5px, 1px) rotate(-1deg); }
+  40% { transform: translate(5px, -1px) rotate(1deg); }
+  50% { transform: translate(-3px, 2px) rotate(-1deg); }
+  60% { transform: translate(3px, -2px) rotate(1deg); }
+  70% { transform: translate(-2px, 1px) rotate(-0.5deg); }
+  80% { transform: translate(2px, -1px) rotate(0.5deg); }
+  90% { transform: translate(-1px, 1px) rotate(-0.2deg); }
+}
+
+
+.value-card:hover {
+  animation: hardRattle 0.5s ease-in-out;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(7, 74, 63, 0.35),
+              0 0 20px rgba(195, 185, 150, 0.5);
+}
+
+
+.value-icon {
+  font-size: 32px;
+  color: #074a3f;
+  background: rgba(195, 185, 150, 0.4);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.value-card:hover .value-icon {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(195, 185, 150, 0.6);
+}
+
+
+.value-card h4 {
+  color: #074a3f;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.value-card p {
+  color: #3a1012;
   font-size: 14px;
-  border-top: 2px solid #c3b996;
+  line-height: 1.6;
+  max-width: 240px;
+  margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-  .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .team-card {
+@media (max-width: 768px) {
+  .value-card {
     width: 90%;
-    max-width: 400px;
-  }
-
-  .overlay h1 {
-    font-size: 30px;
-  }
-
-  .overlay p {
-    font-size: 15px;
   }
 }
+
+
