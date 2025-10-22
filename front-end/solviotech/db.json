@@ -5,14 +5,14 @@
       "title": "The Sizzled Munch",
       "description": "A comprehensive e-commerce solution with payment integration, inventory management, and an admin dashboard.",
       "technologies": ["React", "Flask", "PostgreSQL", "Stripe", "CSS"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-21 01-15-16.png",
       "github": "#",
       "demo": "#",
       "category": "Web Development"
     },
     {
       "id": 2,
-      "title": "But Tap",
+      "title": "Buy Tap",
       "description": "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Python"],
       "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
@@ -25,7 +25,7 @@
       "title": "Menu Metrics Africa",
       "description": "Interactive business intelligence dashboard with charts, KPIs, and live data updates.",
       "technologies": ["React", "Node.js", "Python", "FastAPI", "Chart.js"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-23 02-31-27.png",
       "github": "#",
       "demo": "#",
       "category": "Data Visualization"
@@ -35,7 +35,7 @@
       "title": "Electrohub",
       "description": "A conversational AI chatbot built using OpenAI’s GPT API for customer support automation.",
       "technologies": ["React", "Flask", "OpenAI API", "Tailwind"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-23 00-17-45.png",
       "github": "#",
       "demo": "#",
       "category": "AI Solutions"
@@ -95,10 +95,10 @@
   },
 
   "stats": [
-    { "icon": "fas fa-briefcase", "value": "150+", "label": "Projects Completed" },
-    { "icon": "fas fa-users", "value": "85+", "label": "Happy Clients" },
-    { "icon": "fas fa-code", "value": "20+", "label": "Technologies" },
-    { "icon": "fas fa-smile", "value": "99%", "label": "Satisfaction Rate" }
+    { "icon": "fas fa-briefcase", "value": "50+", "label": "Projects Completed" },
+    { "icon": "fas fa-users", "value": "45+", "label": "Happy Clients" },
+    { "icon": "fas fa-code", "value": "15+", "label": "Technologies" },
+    { "icon": "fas fa-smile", "value": "90%", "label": "Satisfaction Rate" }
   ],
 
   "services": [
@@ -125,7 +125,7 @@
       "title": "E-Commerce Platform",
       "description": "A full-stack e-commerce solution built with React and Flask.",
       "technologies": ["React", "Flask", "PostgreSQL", "Tailwind CSS"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-21 01-15-16.png",
       "github": "#",
       "demo": "#"
     },
@@ -133,7 +133,7 @@
       "title": "Task Management App",
       "description": "Modern task management application with real-time collaboration.",
       "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-23 02-31-27.png",
       "github": "#",
       "demo": "#"
     }
