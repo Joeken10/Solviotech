@@ -162,7 +162,7 @@
           "image": "/images/joeken.png",
           "bio": "Passionate full-stack developer with expertise in React, Python, and cloud technologies. JK specializes in creating scalable web applications and has a keen eye for both frontend aesthetics and backend architecture.",
           "skillsTitle": "Skills & Technologies",
-          "skills": ["React", "Python", "Flask", "AWS", "PostgreSQL", "Docker"]
+          "skills": ["React", "Python", "Flask", "JavaScript", "PostgreSQL", "Figma"]
         },
         {
           "name": "Philip Osir",
@@ -172,9 +172,9 @@
           "skillsTitle": "Skills & Technologies",
           "skills": [
             "JavaScript",
-            "TypeScript",
+            "Python",
             "React",
-            "Next.js",
+            "PHP",
             "Node.js",
             "MongoDB",
             "Tailwind CSS",
