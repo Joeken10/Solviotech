@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Search,
-  PenTool,
-  Code2,
-  CheckCircle2,
-  Rocket,
-} from "lucide-react";
+import { ReactTyped } from "react-typed";
+import { Search, PenTool, Code2, CheckCircle2, Rocket } from "lucide-react";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -14,6 +9,7 @@ const HeroSection = () => {
   const [stats, setStats] = useState([]);
   const [services, setServices] = useState([]);
   const [featuredProjects, setFeaturedProjects] = useState([]);
+  const [showFullHeading, setShowFullHeading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,13 +52,29 @@ const HeroSection = () => {
       >
         <div className="overlay"></div>
         <div className="hero-content">
-          <h4>{heroData.subtitle || "Crafting Digital Solutions That"}</h4>
-          <h2>
-            <span>{heroData.title || "Transform Your Business"}</span>
-          </h2>
-          <p>
-            {heroData.description ||
-              `We are Solviotech — a passionate team of developers creating innovative web and mobile applications that drive results and exceed expectations.`}
+          {!showFullHeading ? (
+            <h1 className="hero-title">
+              <ReactTyped
+                strings={[
+                  "Crafting Digital Solutions That <br/>Transform Your Business",
+                ]}
+                typeSpeed={50}
+                showCursor={false}
+                loop={false}
+                onComplete={() => setShowFullHeading(true)}
+              />
+            </h1>
+          ) : (
+            <h1 className="hero-title show-full">
+              Crafting Digital Solutions That <br />
+              <span className="highlight">Transform Your Business</span>
+            </h1>
+          )}
+
+          <p className="hero-subtitle">
+            We are <span className="brand-name">Solviotech</span> — a passionate
+            team of developers creating innovative web and mobile applications
+            that drive results and exceed expectations.
           </p>
 
           <div className="hero-buttons">
@@ -76,7 +88,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-     
+      
       <section className="hero-stats">
         {stats.map((item, index) => (
           <div className="stat" key={index}>
@@ -87,12 +99,13 @@ const HeroSection = () => {
         ))}
       </section>
 
-     
+      
       <section className="services-section">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
           <p className="section-sub">
-            We offer a comprehensive range of development services to bring your ideas to life
+            We offer a comprehensive range of development services to bring your
+            ideas to life
           </p>
 
           <div className="services-grid">
@@ -106,42 +119,68 @@ const HeroSection = () => {
         </div>
       </section>
 
-     
+      
       <section className="process-timeline container">
         <h2 className="section-title">Our Process</h2>
         <p className="section-sub">
-          From concept to completion, we follow a transparent and efficient workflow.
+          From concept to completion, we follow a transparent and efficient
+          workflow.
         </p>
 
         <div className="timeline-grid">
           <div className="timeline-card">
-            <div className="timeline-icon"><Search size={28} /></div>
+            <div className="timeline-icon">
+              <Search size={28} />
+            </div>
             <h3>Discovery</h3>
-            <p>We understand your vision, goals, and requirements through in-depth consultation.</p>
+            <p>
+              We understand your vision, goals, and requirements through
+              in-depth consultation.
+            </p>
           </div>
 
           <div className="timeline-card">
-            <div className="timeline-icon"><PenTool size={28} /></div>
+            <div className="timeline-icon">
+              <PenTool size={28} />
+            </div>
             <h3>Design</h3>
-            <p>Creating intuitive wireframes and stunning UI/UX designs that bring your ideas to life.</p>
+            <p>
+              Creating intuitive wireframes and stunning UI/UX designs that
+              bring your ideas to life.
+            </p>
           </div>
 
           <div className="timeline-card">
-            <div className="timeline-icon"><Code2 size={28} /></div>
+            <div className="timeline-icon">
+              <Code2 size={28} />
+            </div>
             <h3>Development</h3>
-            <p>Building robust, scalable solutions using cutting-edge technologies and best practices.</p>
+            <p>
+              Building robust, scalable solutions using cutting-edge
+              technologies and best practices.
+            </p>
           </div>
 
           <div className="timeline-card">
-            <div className="timeline-icon"><CheckCircle2 size={28} /></div>
+            <div className="timeline-icon">
+              <CheckCircle2 size={28} />
+            </div>
             <h3>Testing</h3>
-            <p>Rigorous quality assurance and testing to ensure flawless performance across all platforms.</p>
+            <p>
+              Rigorous quality assurance and testing to ensure flawless
+              performance across all platforms.
+            </p>
           </div>
 
           <div className="timeline-card">
-            <div className="timeline-icon"><Rocket size={28} /></div>
+            <div className="timeline-icon">
+              <Rocket size={28} />
+            </div>
             <h3>Launch</h3>
-            <p>Seamless deployment and ongoing support to ensure your success in the digital world.</p>
+            <p>
+              Seamless deployment and ongoing support to ensure your success in
+              the digital world.
+            </p>
           </div>
         </div>
       </section>
@@ -151,7 +190,8 @@ const HeroSection = () => {
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-sub">
-            Take a look at some of our recent work that showcases our expertise and creativity
+            Take a look at some of our recent work that showcases our expertise
+            and creativity
           </p>
 
           <div className="featured-grid">
@@ -197,7 +237,8 @@ const HeroSection = () => {
           <div>
             <h2>Ready to Start Your Project?</h2>
             <p>
-              Let's work together to bring your vision to life. Contact us today for a free consultation.
+              Let's work together to bring your vision to life. Contact us today
+              for a free consultation.
             </p>
           </div>
           <Link to="/contact" className="btn-outline alt-cta">
