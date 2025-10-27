@@ -43,12 +43,13 @@ const HeroSection = () => {
       
       <section
         className="hero"
-        style={{
-          backgroundImage: `url(${
-            heroData.image ||
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80&auto=format&fit=crop"
-          })`,
-        }}
+       style={{
+  backgroundImage: `url(${heroData.image || "/images/homepage.jpg"})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+}}
+
       >
         <div className="overlay"></div>
         <div className="hero-content">
