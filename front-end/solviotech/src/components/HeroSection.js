@@ -225,12 +225,14 @@ const HeroSection = () => {
           </div>
 
           <div className="center-btn">
-            <Link to="/portfolio" className="btn-primary">
-              View All Projects
-            </Link>
-          </div>
+  <Link to="/portfolio" className="btn-primary aura-btn">
+    View All Projects
+  </Link>
+</div>
         </div>
       </section>
+
+      
 
       
       <section className="home-cta">

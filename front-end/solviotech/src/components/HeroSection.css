@@ -520,4 +520,179 @@
 }
 
 
+/* === Testimonials Section === */
+.testimonials-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
 
+.testimonials-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-section .section-sub {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.reviewed-on {
+  font-weight: 600;
+  color: #888;
+  margin-top: 10px;
+}
+
+.ratings-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ratings-summary img {
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.ratings-summary h3 {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+/* === Scrolling animation === */
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: scroll-left 45s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* === Testimonial cards === */
+.testimonial-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  min-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.03);
+}
+
+.testimonial-category {
+  font-weight: 600;
+  color: #ff7b00;
+  margin-bottom: 5px;
+}
+
+.rating {
+  color: #ffc107;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-user h5 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonial-user p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.scroll-wrapper:hover .scroll-track {
+  animation-play-state: paused;
+}
+.center-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+
+.aura-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.4rem 4rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #074a3f, #0a6b5b);
+  color: #fff;
+  border: 2px solid #c3b996;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 25px rgba(195, 185, 150, 0.4),
+              0 0 60px rgba(7, 74, 63, 0.3);
+  transition: all 0.3s ease, box-shadow 0.6s ease;
+  text-decoration: none;
+  cursor: pointer;
+  animation: pulseAura 2.5s infinite alternate;
+}
+
+.aura-btn:hover {
+  transform: scale(1.06);
+  background: linear-gradient(135deg, #0a7b65, #074a3f);
+  box-shadow: 0 0 40px rgba(195, 185, 150, 0.7),
+              0 0 90px rgba(7, 74, 63, 0.6);
+  color: #ffffff;
+}
+
+
+@keyframes pulseAura {
+  0% {
+    box-shadow: 0 0 25px rgba(195, 185, 150, 0.4),
+                0 0 60px rgba(7, 74, 63, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(195, 185, 150, 0.7),
+                0 0 90px rgba(7, 74, 63, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(195, 185, 150, 0.4),
+                0 0 60px rgba(7, 74, 63, 0.3);
+  }
+}
