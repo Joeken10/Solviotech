@@ -53,8 +53,6 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-
-        <button className="contact-btn">Get In Touch</button>
       </div>
     </nav>
   );
