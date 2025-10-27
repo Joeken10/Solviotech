@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">
+      <NavLink to="/" className="logo">
         <img
           src={`${process.env.PUBLIC_URL}/solvioG.svg`}
           alt="Solviotech Logo"
@@ -15,7 +15,7 @@ const Navbar = () => {
           <span className="logo-solvio">Solvio</span>
           <span className="logo-tech">Tech</span>
         </span>
-      </div>
+      </NavLink>
 
       <div className="nav-right">
         <ul className="nav-links">
