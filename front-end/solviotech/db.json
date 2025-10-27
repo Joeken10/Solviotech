@@ -12,10 +12,10 @@
     },
     {
       "id": 2,
-      "title": "Buy Tap",
+      "title": "Bid Wave",
       "description": "A modern task management tool featuring real-time collaboration, workspaces, and analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Python"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/bidwave.png",
       "github": "#",
       "demo": "#",
       "category": "Mobile Development"

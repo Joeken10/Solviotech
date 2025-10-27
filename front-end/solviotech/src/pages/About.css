@@ -354,3 +354,134 @@
 }
 
 
+/* ===== Mission & Vision Section ===== */
+.mission-vision {
+  background: #f9f9f7;
+  padding: 120px 8%;
+  text-align: center;
+}
+
+.mv-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #074a3f;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.mv-highlight {
+  color: #3a1012;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.mv-highlight::before {
+  content: "✦";
+  color: #c3b996;
+  margin-right: 8px;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
+
+.mv-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(7, 74, 63, 0.15);
+  overflow: hidden;
+  max-width: 900px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(7, 74, 63, 0.25);
+}
+
+.mv-text {
+  flex: 1;
+  padding: 50px 40px;
+  text-align: left;
+}
+
+.mv-text h3 {
+  color: #074a3f;
+  font-size: 26px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.mv-text p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 16.5px;
+  margin-bottom: 25px;
+}
+
+.mv-btn {
+  background: #3a1012;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mv-btn:hover {
+  background: #074a3f;
+  transform: scale(1.05);
+}
+
+.mv-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c3b9961a;
+}
+
+.mv-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 900px) {
+  .mv-card {
+    flex-direction: column;
+  }
+
+  .mv-text {
+    text-align: center;
+    padding: 30px 25px;
+  }
+
+  .mv-text h3 {
+    font-size: 22px;
+  }
+
+  .mv-text p {
+    font-size: 15px;
+  }
+
+  .mv-btn {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}

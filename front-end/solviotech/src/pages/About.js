@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
 import "./About.css";
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);
-  const missionRef = useRef(null);
 
-  // Fetch About data
+  
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
@@ -20,47 +19,13 @@ const About = () => {
     fetchAboutData();
   }, []);
 
-  // Scroll animation for mission
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          missionRef.current.classList.add("visible");
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (missionRef.current) observer.observe(missionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   if (!aboutData) return <p>Loading...</p>;
 
-  const { hero, mission, team } = aboutData;
-
-  // Highlight key terms dynamically
-  const highlightText = (text) => {
-    const keywords = [
-      "innovation",
-      "dedication",
-      "excellence",
-      "collaboration",
-      "performance",
-      "technology",
-      "growth",
-      "solutions",
-    ];
-    let newText = text;
-    keywords.forEach((word) => {
-      const regex = new RegExp(`\\b(${word})\\b`, "gi");
-      newText = newText.replace(regex, `<strong>${word}</strong>`);
-    });
-    return newText;
-  };
+  const { hero, team } = aboutData;
 
   return (
     <div className="about-page">
-      {/* ===== HERO SECTION ===== */}
+      
       <section
         className="about-hero"
         style={{ backgroundImage: `url(${hero.backgroundImage})` }}
@@ -78,7 +43,7 @@ const About = () => {
           <p className="hero-subtitle">
             Empowering businesses and innovators through{" "}
             <strong>modern software solutions</strong> crafted with{" "}
-            <strong>excellence</strong>, precision, and purpose.  
+            <strong>excellence</strong>, precision, and purpose.
             <br />
             <br />
             At <strong>Solviotech</strong>, we believe technology should
@@ -88,48 +53,62 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== OUR STORY & MISSION ===== */}
-      <section className="about-mission" ref={missionRef}>
-        <h2 className="mission-title">
-          <ReactTyped
-            strings={["Our Story & Mission"]}
-            typeSpeed={40}
-            backSpeed={0}
-            showCursor={false}
-          />
+      
+      <section className="mission-vision">
+        <h2 className="mv-title">
+          <span className="mv-highlight">Our Story</span>
+          <br />
+          Company <strong>Mission & Vision</strong>
         </h2>
 
-        <p>
-          Solviotech was founded by{" "}
-          <strong>Joseph Kennedy (JK)</strong> and{" "}
-          <strong>Philip Osir</strong> — two passionate full-stack software
-          engineers driven by the vision of providing{" "}
-          <strong>elegant, scalable, and intelligent</strong> technology
-          solutions for businesses across the globe.
-        </p>
+        <div className="mv-grid">
+          
+          <div className="mv-card mv-mission">
+            <div className="mv-text">
+              <h3>Our Mission to Achieve Excellence</h3>
+              <p>
+                At <strong>Solviotech</strong>, our mission is to empower
+                startups, businesses, and innovators through smart, scalable,
+                and elegant technology. We help brands build strong digital
+                foundations, enhance user experience, and grow sustainably in
+                the modern tech landscape.
+              </p>
+              <button className="mv-btn">Our History →</button>
+            </div>
 
-        <p>
-          We specialize in full-stack web and mobile development, cloud
-          integration, and UI/UX design. Our mission is to create{" "}
-          <strong>meaningful digital experiences</strong> that simplify complex
-          problems and accelerate business growth through{" "}
-          <strong>innovation</strong> and <strong>excellence</strong>.
-        </p>
+            <div className="mv-image">
+              <img
+                src={`${process.env.PUBLIC_URL}/mission.jpg`}
+                alt="Solviotech Mission"
+              />
+            </div>
+          </div>
 
-        <p>
-          What sets us apart is our relentless commitment to{" "}
-          <strong>understanding your vision</strong> — transforming ideas into
-          seamless digital products that deliver real value, foster{" "}
-          <strong>collaboration</strong>, and drive measurable{" "}
-          <strong>performance</strong>.
-        </p>
+          
+          <div className="mv-card mv-vision">
+            <div className="mv-text">
+              <h3>Our Vision to Inspire Growth</h3>
+              <p>
+                We envision a world where businesses leverage digital
+                intelligence to reach new heights. By combining{" "}
+                <strong>technology</strong>, <strong>design</strong>, and{" "}
+                <strong>collaboration</strong>, we aim to build solutions that
+                inspire progress and drive lasting success.
+              </p>
+              <button className="mv-btn">Our History →</button>
+            </div>
 
-        {mission.content.map((p, i) => (
-          <p key={i} dangerouslySetInnerHTML={{ __html: highlightText(p) }} />
-        ))}
+            <div className="mv-image">
+              <img
+                src={`${process.env.PUBLIC_URL}/vision.jpg`}
+                alt="Solviotech Vision"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* ===== VALUES SECTION ===== */}
+      
       <section className="values-section">
         <h3 className="values-subtitle">Our Values</h3>
         <h2 className="values-title">
@@ -150,8 +129,8 @@ const About = () => {
             <div className="value-icon">💡</div>
             <h4>Innovation</h4>
             <p>
-              We embrace new technologies and creative thinking to craft
-              unique, impactful solutions.
+              We embrace new technologies and creative thinking to craft unique,
+              impactful solutions.
             </p>
           </div>
 
@@ -175,7 +154,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== TEAM SECTION ===== */}
+      
       <section className="team-section">
         <h3 className="section-subtitle">{team.sectionSubtitle}</h3>
         <h2 className="section-title">{team.sectionTitle}</h2>
