@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,10 +19,39 @@ const Navbar = () => {
 
       <div className="nav-right">
         <ul className="nav-links">
-          <li><a href="/" className="active">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/portfolio"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Portfolio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
 
         <button className="contact-btn">Get In Touch</button>
