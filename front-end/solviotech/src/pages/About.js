@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
+import { motion } from "framer-motion";
 import "./About.css";
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);
 
-  
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
@@ -25,35 +25,68 @@ const About = () => {
 
   return (
     <div className="about-page">
-      
+      {/* ===== Enhanced Hero Section ===== */}
       <section
-        className="about-hero"
+        className="about-hero split-hero"
         style={{ backgroundImage: `url(${hero.backgroundImage})` }}
       >
-        <div className="overlay">
-          <h1 className="hero-title">
-            <ReactTyped
-              strings={["About Solviotech"]}
-              typeSpeed={50}
-              backSpeed={0}
-              showCursor={false}
-            />
-          </h1>
+        <div className="split-container">
+          {/* Left - Text */}
+          <motion.div
+            className="hero-left"
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="hero-title">
+              <ReactTyped
+                strings={["About Solviotech"]}
+                typeSpeed={45}
+                backSpeed={25}
+                showCursor={false}
+              />
+            </h1>
 
-          <p className="hero-subtitle">
-            Empowering businesses and innovators through{" "}
-            <strong>modern software solutions</strong> crafted with{" "}
-            <strong>excellence</strong>, precision, and purpose.
-            <br />
-            <br />
-            At <strong>Solviotech</strong>, we believe technology should
-            simplify, amplify, and inspire — helping organizations unlock
-            their true potential in the digital era.
-          </p>
+            <p className="hero-subtitle big-text">
+              Empowering businesses and innovators through{" "}
+              <strong>modern software solutions</strong> crafted with{" "}
+              <strong>excellence</strong>, precision, and purpose.
+            </p>
+
+            <p className="hero-tagline big-text">
+              At <strong>Solviotech</strong>, we believe technology should{" "}
+              <em>simplify, amplify, and inspire</em> — helping organizations
+              unlock their true potential in the digital era.
+            </p>
+
+            <motion.button
+              className="hero-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Discover More →
+            </motion.button>
+          </motion.div>
+
+          {/* Right - Image */}
+          <motion.div
+            className="hero-right"
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 1 }}
+          >
+            <motion.img
+              src={`${process.env.PUBLIC_URL}/about-illustration.jpg`}
+              alt="About Solviotech"
+              className="hero-image"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
+            />
+          </motion.div>
         </div>
       </section>
 
-      
+      {/* ===== Mission & Vision ===== */}
       <section className="mission-vision">
         <h2 className="mv-title">
           <span className="mv-highlight">Our Story</span>
@@ -62,8 +95,12 @@ const About = () => {
         </h2>
 
         <div className="mv-grid">
-          
-          <div className="mv-card mv-mission">
+          {/* Mission */}
+          <motion.div
+            className="mv-card mv-mission"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 100 }}
+          >
             <div className="mv-text">
               <h3>Our Mission to Achieve Excellence</h3>
               <p>
@@ -82,10 +119,14 @@ const About = () => {
                 alt="Solviotech Mission"
               />
             </div>
-          </div>
+          </motion.div>
 
-          
-          <div className="mv-card mv-vision">
+          {/* Vision */}
+          <motion.div
+            className="mv-card mv-vision"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 100 }}
+          >
             <div className="mv-text">
               <h3>Our Vision to Inspire Growth</h3>
               <p>
@@ -104,64 +145,59 @@ const About = () => {
                 alt="Solviotech Vision"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      
+      {/* ===== Values ===== */}
       <section className="values-section">
-        <h3 className="values-subtitle">Our Values</h3>
+        <motion.h3
+          className="values-subtitle"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Our Values
+        </motion.h3>
+
         <h2 className="values-title">
           The principles that guide everything we do
         </h2>
 
         <div className="values-grid">
-          <div className="value-card">
-            <div className="value-icon">💻</div>
-            <h4>Quality Code</h4>
-            <p>
-              We build robust, maintainable, and scalable solutions that stand
-              the test of time.
-            </p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">💡</div>
-            <h4>Innovation</h4>
-            <p>
-              We embrace new technologies and creative thinking to craft unique,
-              impactful solutions.
-            </p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">🤝</div>
-            <h4>Collaboration</h4>
-            <p>
-              We partner with clients closely — understanding their goals,
-              sharing ideas, and building trust.
-            </p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">⚡</div>
-            <h4>Performance</h4>
-            <p>
-              Every system we build is optimized for speed, reliability, and
-              exceptional user experience.
-            </p>
-          </div>
+          {[
+            { icon: "💻", title: "Quality Code", text: "We build robust, maintainable, and scalable solutions that stand the test of time." },
+            { icon: "💡", title: "Innovation", text: "We embrace new technologies and creative thinking to craft unique, impactful solutions." },
+            { icon: "🤝", title: "Collaboration", text: "We partner closely with clients — understanding goals, sharing ideas, and building trust." },
+            { icon: "⚡", title: "Performance", text: "Every system we build is optimized for speed, reliability, and user experience." }
+          ].map((v, i) => (
+            <motion.div
+              key={i}
+              className="value-card"
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              transition={{ type: "spring", stiffness: 150 }}
+            >
+              <div className="value-icon">{v.icon}</div>
+              <h4>{v.title}</h4>
+              <p>{v.text}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      
+      {/* ===== Team ===== */}
       <section className="team-section">
         <h3 className="section-subtitle">{team.sectionSubtitle}</h3>
         <h2 className="section-title">{team.sectionTitle}</h2>
 
         <div className="team-grid">
           {team.members.map((member, i) => (
-            <div key={i} className="team-card">
+            <motion.div
+              key={i}
+              className="team-card"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 150 }}
+            >
               <div className="team-card-inner">
                 <div className="team-image-wrapper">
                   <img
@@ -184,7 +220,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
