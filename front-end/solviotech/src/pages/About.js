@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./About.css";
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchAboutData = async () => {
@@ -25,13 +27,13 @@ const About = () => {
 
   return (
     <div className="about-page">
-      {/* ===== Enhanced Hero Section ===== */}
+      
       <section
         className="about-hero split-hero"
         style={{ backgroundImage: `url(${hero.backgroundImage})` }}
       >
         <div className="split-container">
-          {/* Left - Text */}
+          
           <motion.div
             className="hero-left"
             initial={{ opacity: 0, x: -60 }}
@@ -59,16 +61,18 @@ const About = () => {
               unlock their true potential in the digital era.
             </p>
 
+            
             <motion.button
               className="hero-btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/portfolio")}
             >
               Discover More →
             </motion.button>
           </motion.div>
 
-          {/* Right - Image */}
+          
           <motion.div
             className="hero-right"
             initial={{ opacity: 0, x: 60 }}
@@ -86,7 +90,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== Mission & Vision ===== */}
+      
       <section className="mission-vision">
         <h2 className="mv-title">
           <span className="mv-highlight">Our Story</span>
@@ -95,7 +99,7 @@ const About = () => {
         </h2>
 
         <div className="mv-grid">
-          {/* Mission */}
+          
           <motion.div
             className="mv-card mv-mission"
             whileHover={{ scale: 1.03 }}
@@ -121,7 +125,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Vision */}
+          
           <motion.div
             className="mv-card mv-vision"
             whileHover={{ scale: 1.03 }}
@@ -149,7 +153,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== Values ===== */}
+      
       <section className="values-section">
         <motion.h3
           className="values-subtitle"
@@ -166,10 +170,26 @@ const About = () => {
 
         <div className="values-grid">
           {[
-            { icon: "💻", title: "Quality Code", text: "We build robust, maintainable, and scalable solutions that stand the test of time." },
-            { icon: "💡", title: "Innovation", text: "We embrace new technologies and creative thinking to craft unique, impactful solutions." },
-            { icon: "🤝", title: "Collaboration", text: "We partner closely with clients — understanding goals, sharing ideas, and building trust." },
-            { icon: "⚡", title: "Performance", text: "Every system we build is optimized for speed, reliability, and user experience." }
+            {
+              icon: "💻",
+              title: "Quality Code",
+              text: "We build robust, maintainable, and scalable solutions that stand the test of time.",
+            },
+            {
+              icon: "💡",
+              title: "Innovation",
+              text: "We embrace new technologies and creative thinking to craft unique, impactful solutions.",
+            },
+            {
+              icon: "🤝",
+              title: "Collaboration",
+              text: "We partner closely with clients — understanding goals, sharing ideas, and building trust.",
+            },
+            {
+              icon: "⚡",
+              title: "Performance",
+              text: "Every system we build is optimized for speed, reliability, and user experience.",
+            },
           ].map((v, i) => (
             <motion.div
               key={i}
@@ -185,7 +205,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== Team ===== */}
+     
       <section className="team-section">
         <h3 className="section-subtitle">{team.sectionSubtitle}</h3>
         <h2 className="section-title">{team.sectionTitle}</h2>
