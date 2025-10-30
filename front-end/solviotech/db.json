@@ -45,17 +45,17 @@
       "title": "Shopsphere",
       "description": "Responsive and elegant portfolio website to showcase projects and skills.",
       "technologies": ["React", "CSS", "Flask", "EmailJS"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-30 22-51-10.png",
       "github": "#",
       "demo": "#",
       "category": "Web Development"
     },
     {
       "id": 6,
-      "title": "IoT Device Monitor",
+      "title": "planit Task Manager",
       "description": "Web app for real-time monitoring of IoT devices with MQTT and Flask backend.",
       "technologies": ["Flask", "Tailwind CSS", "React", "Open AI"],
-      "image": "/images/Screenshot from 2025-08-12 15-36-13.png",
+      "image": "/images/Screenshot from 2025-10-30 23-28-33.png",
       "github": "#",
       "demo": "#",
       "category": "IoT"
