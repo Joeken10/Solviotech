@@ -594,7 +594,7 @@
   object-fit: cover;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .mv-card {
     flex-direction: column;
@@ -667,7 +667,7 @@
 .hero-title {
   font-size: 64px;
   font-weight: 800;
-  color: #c3b996;
+  color: #3a1012;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
